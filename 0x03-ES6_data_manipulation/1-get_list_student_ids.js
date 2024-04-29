@@ -1,8 +1,5 @@
 export default function getListStudentIds(arg) {
-  const ids = [];
-  if (!(arg instanceof Array)) return ids;
+  if (!(arg instanceof Array)) return [];
 
-  arg.forEach((obj) => ids.push(obj.id));
-
-  return ids;
+  return arg.map((student) => student.id);
 }
